@@ -50,10 +50,6 @@ nav_order: 4
 
 ### **Athena**
 
-<div style="text-align:center">
-  <img src="assets/img/1.png" alt="drawing" width="150"/>
-</div>
-
 A task planning framework designed to solve, dispatch, and execute PDDL and HDDL planning problems.
 
 The library contains:
