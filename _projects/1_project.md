@@ -5,7 +5,7 @@ description: MORE is an innovative European Industrial Doctorate (EID) research 
 img: assets/img/12.jpg
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
-Detailed information about the project and its outcome can be found on the project webpage.
+Detailed information about the project and its outcome can be found on the project [webpage](http://reddit.com).
