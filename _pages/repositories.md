@@ -48,5 +48,5 @@ nav_order: 4
 
 ## GitHub Private Repositories
 
-### **Athena**
+### Athena
 Repository for task planning.
