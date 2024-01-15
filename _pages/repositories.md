@@ -50,14 +50,9 @@ nav_order: 4
 
 ### **Athena**
 
+<div style="text-align:center">
+  <img src="assets/img/1.png" alt="drawing" width="150"/>
+</div>
+
 A task planning framework designed to solve, dispatch, and execute PDDL and HDDL planning problems.
 
-The library contains:
-
-* A PDDL 3.1 and HDDL 1.0 parser based on the [PDDL4j library](https://github.com/pellierd/pddl4j).
-
-* A set of task planning algorithms to compute plans for PDDL and HDDL planning problems.
-
-* Three different types of execution plans: Total Order, Partial Order, and Concurrent.
-
-* Several examples.
