@@ -8,4 +8,4 @@ category: work
 related_publications: false
 ---
 
-Detailed information about the project and its outcome can be found on the project [webpage](http://reddit.com).
+Detailed information about the project and its outcome can be found on the MORE project [webpage](https://www.more-itn.eu).
