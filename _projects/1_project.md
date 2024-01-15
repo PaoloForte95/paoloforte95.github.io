@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: MORE
+description: MORE is an innovative European Industrial Doctorate (EID) research and training programme.
 img: assets/img/12.jpg
 importance: 1
 category: work
@@ -20,6 +20,8 @@ To give your project a background in the portfolio page, just add the img tag to
     description: a project with a background image
     img: /assets/img/12.jpg
     ---
+
+Detailed information can be found on the project webpage.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
