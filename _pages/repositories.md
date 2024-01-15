@@ -35,7 +35,7 @@ nav_order: 4
 {% endif %}
 {% endif %}
 
-## GitHub Repositories
+## GitHub Public Repositories
 
 {% if site.data.repositories.github_repos %}
 
@@ -45,3 +45,7 @@ nav_order: 4
   {% endfor %}
 </div>
 {% endif %}
+
+## GitHub Private Repositories
+
+# Athena 
