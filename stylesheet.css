@@ -86,14 +86,16 @@ a {
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: inherit;      /* ← use same size as the surrounding text */
+  font-weight: 600;        /* slightly bolder than normal */
+  color: #000;             /* optional: make it clear black */
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 1.6rem;
 }
 
 .papertitle {
@@ -134,9 +136,436 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
+.btn-custom-sm {
+  width: 65px;
+  padding: 1px 5px;
+  font-size: 12px;
+}
+
+ul {
+  list-style-position: outside;
+  /* margin-left: 0; */
+  /* padding-left: 1em; */
+  padding-left:10px;
+  margin: 0px 0px 0px 0px;
+}
+
+.same-width {
+  font-family: monospace;
+}
+
+.news-left {
+  padding:10px 15px;
+  background:#fff;
+  border-left:5px solid #ffd500;
+  border-radius:10px 0 0 10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.news-right {
+  padding:10px;
+  width:220px;                 /* consistent thumb column */
+  vertical-align:middle;
+  background:#fff;
+  border-radius:0 10px 10px 0;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.news-img {
+  display:block;
+  margin:0 auto;
+  max-width:180px;             /* your “good” size */
+  height:120px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.news-left ul li {
+  font-size: 1.1rem;         /* bigger text */
+  line-height: 1.55;
+}
+
+.news-left ul li a {
+  font-size: inherit;        /* use same size as surrounding text */
+  color: #0070cc;            /* subtle readable blue (Bootstrap-like) */
+  text-decoration: none;     /* cleaner look */
+  font-weight: 500;          /* slightly stronger */
+}
+
+.news-left ul li a:hover {
+  text-decoration: underline; /* accessible hover feedback */
+}
+
+.news-left ul li b {
+  color: #000;
+  font-weight: 600;
+}
+
+/* smaller thumbnails */
+.news-right {
+  width: 160px !important;
+}
+
+.news-carousel {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;                              /* clip corners */
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.news-carousel .carousel-item img {
+  width: 100%;
+  height: 95px;                                  /* same as your previous thumb */
+  object-fit: cover;
+  display: block;
+}
+
+/* Smaller, subtle arrow controls */
+.news-carousel .carousel-control-prev,
+.news-carousel .carousel-control-next {
+  width: 26px;                                   /* narrow hit area */
+  opacity: 0.9;
+}
+.news-carousel .carousel-control-prev-icon,
+.news-carousel .carousel-control-next-icon {
+  background-size: 100% 100%;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+.news-carousel .carousel-control-prev {
+  left: 2px;
+}
+.news-carousel .carousel-control-next {
+  right: 2px;
+}
+
+/* Optional: hide indicators (dots) on tiny thumbs */
+.news-carousel .carousel-indicators { display: none; }
+
+.news-img {
+  max-width: 140px !important;
+  height: 95px !important;
+}
+
+/* Make top navigation tabs larger and clearer */
+.navbar-nav .nav-link {
+  font-size: 1.15rem;       /* increase text size */
+  font-weight: 500;         /* slightly bolder */
+  padding: 0.6rem 1.2rem;   /* more vertical + horizontal space */
+  letter-spacing: 0.3px;    /* subtle spacing */
+}
+
+.navbar-brand {
+  font-size: 1.4rem;        /* larger name on the left */
+  font-weight: 600;
+}
+
+/* Optional: emphasize the active tab */
+.navbar .nav-link.active {
+  font-weight: 600;
+  border-bottom: 3px solid #ffd500;
+  color: #000 !important;
+}
+
+/* ===== Introduction section ===== */
+.name {
+  font-size: 2rem;              /* your name headline size */
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.intro p {
+  font-size: 1.05rem;           /* slightly larger than default (16px → ~17px) */
+  line-height: 1.65;            /* more readable spacing */
+  color: #222;                  /* darker text for contrast */
+}
+
+/* Optional: make intro links stand out slightly */
+.intro a {
+  font-size: inherit;           /* match paragraph text size */
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+}
+.intro a:hover {
+  text-decoration: underline;
+}
+
+/* === Profile carousel (intro image) === */
+.profile-carousel {
+  border-radius: 20%;              /* restore rounded corners */
+  overflow: hidden;                /* ensures corners clip images */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.profile-carousel img {
+  width: 100%;
+  height: 250px;                   /* keep consistent shape */
+  object-fit: cover;
+  display: block;
+}
+
+/* Smaller, subtle arrows for profile */
+.profile-carousel .carousel-control-prev,
+.profile-carousel .carousel-control-next {
+  width: 15%;
+  opacity: 0.8;
+}
+
+.profile-carousel .carousel-control-prev-icon,
+.profile-carousel .carousel-control-next-icon {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+
+/* Optional: only show arrows on hover */
+.profile-carousel:hover .carousel-control-prev,
+.profile-carousel:hover .carousel-control-next {
+  opacity: 0.9;
+}
+.profile-carousel .carousel-control-prev,
+.profile-carousel .carousel-control-next {
+  opacity: 0;                      /* hidden by default */
+  transition: opacity 0.2s ease;
+}
+
+#selected {
+  font-size: 1.8rem;           /* larger header "Publications" */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ===== Publications Styling ===== */
+
+/* Paper title: larger, stronger, slightly darker */
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 1.18rem;     /* slightly smaller */
+  font-weight: 600;       /* semi-bold instead of bold */
+  color: #222;            /* softer dark gray instead of pure black */
+  line-height: 1.4;
+  margin-bottom: 0.3em;
+}
+/* Author list: regular weight, but first author emphasized */
+.publications td {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Emphasize only your own name */
+.publications td strong {
+  font-weight: 700;
+  color: #000;             /* true black for emphasis */
+}
+
+/* Coauthors (regular) */
+.publications td {
+  font-weight: 400;
+}
+
+/* Venue (e.g., ICRA 2025) */
+.publications td em {
+  font-style: italic;
+  color: #666;
+  display: inline-block;
+  margin: 2px 0 5px 0;
+  font-size: 1rem;
+}
+
+/* Description paragraph */
+.publications p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Buttons (Paper / Code) spacing */
+.publications .btn {
+  margin-right: 5px;
+}
+
+.me-author {
+  font-weight: 500;                  /* normal weight for subtle look */
+  background-color: #fff9b3;         /* soft lemon yellow */
+  padding: 4px 4px;                  /* gentle space around text */
+  border-radius: 5px;                /* rounded corners */
+  color: #000;                       /* clear black text */
+}
+
+/* Optional: hover effect for gentle emphasis */
+.me-author:hover {
+  background-color: #fff48c;         /* slightly brighter yellow */
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* === Experience with logos === */
+.experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 12px 20px;
+  background: #fff;
+  border-left: 5px solid #b4e1b9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.experience-list li {
+  display: flex;               /* logo + text inline */
+  align-items: center;
+  gap: 12px;                   /* space between logo and text */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 8px 0;
+  padding-left: 0;             /* remove the custom bullet offset */
+  position: relative;
+}
+
+/* remove the previous dot bullets if you had them */
+.experience-list li::before { content: none; }
+
+.experience-logo {
+  width: 48px;                  /* slightly smaller than 50 → better text alignment */
+  height: 48px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;           /* slightly rounder corners for larger size */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex: 0 0 48px;
+  margin-right: 8px;            /* extra spacing before text */
+}
+
+/* Larger on wide screens */
+@media (min-width: 992px) {
+  .experience-logo {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+}
+
+.experience-list b {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ===== Experience section links ===== */
+.experience-list a {
+  font-family: inherit;         /* match surrounding text (Lato) */
+  font-size: inherit;           /* same size as the rest */
+  font-weight: inherit;         /* no extra bolding */
+  color: #0056b3;               /* subtle academic blue */
+  text-decoration: none;
+}
+
+.experience-list a:hover {
+  text-decoration: underline;   /* simple hover feedback */
+  color: #003e8a;               /* slightly darker blue on hover */
+}
+
+
+/* ===== Section headers (Experience, News, etc.) ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;       /* space above each section */
+  margin-bottom: 12px;    /* space below the header before content */
+}
+
+/* Smaller margin for the very first section after Intro */
+.section-header:first-of-type {
+  margin-top: 30px;
+}
+
+/* Make h2 visually consistent */
+.section-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Make small “To publications →” button align nicely */
+.section-header .btn {
+  font-size: 1.1rem;
+  padding: 3px 8px;
+}
+
+/* For larger standalone titles in project cards (like DARKO section) */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+.project-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.project-thumb {
+  width: 100%;
+  max-width: 320px;          /* slightly larger than current */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.card-text {
+  font-size: 0.95rem;
+}
+
+.iclr-confetti {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+/* each piece of confetti */
+.iclr-confetti .confetti-piece {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 10px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confetti-burst 2.3s ease-out infinite;
+  transform-origin: center;
+}
+
+/* different colors, positions, timing for each piece */
+.iclr-confetti .confetti-piece:nth-child(2)  { left: -6px;  background:#ff4d4d; animation-delay:0s;    animation-duration:2.1s; }
+.iclr-confetti .confetti-piece:nth-child(3)  { left: 0px;   background:#ffd11a; animation-delay:0.2s;  animation-duration:2.4s; }
+.iclr-confetti .confetti-piece:nth-child(4)  { left: 6px;   background:#66ff66; animation-delay:0.1s;  animation-duration:2.0s; }
+.iclr-confetti .confetti-piece:nth-child(5)  { left: 12px;  background:#66b3ff; animation-delay:0.35s; animation-duration:2.5s; }
+.iclr-confetti .confetti-piece:nth-child(6)  { left: 18px;  background:#ff66ff; animation-delay:0.15s; animation-duration:2.2s; }
+.iclr-confetti .confetti-piece:nth-child(7)  { left: 24px;  background:#ff944d; animation-delay:0.4s;  animation-duration:2.3s; }
+.iclr-confetti .confetti-piece:nth-child(8)  { left: -12px; background:#b366ff; animation-delay:0.25s; animation-duration:2.6s; }
+.iclr-confetti .confetti-piece:nth-child(9)  { left: -18px; background:#4dd2ff; animation-delay:0.1s;  animation-duration:2.2s; }
+.iclr-confetti .confetti-piece:nth-child(10) { left: 30px;  background:#ff1ac6; animation-delay:0.05s; animation-duration:2.0s; }
+.iclr-confetti .confetti-piece:nth-child(11) { left: -24px; background:#33ff99; animation-delay:0.3s;  animation-duration:2.4s; }
+.iclr-confetti .confetti-piece:nth-child(12) { left: 36px;  background:#ffcc66; animation-delay:0.45s; animation-duration:2.7s; }
+
+/* go up, then fall down, like thrown confetti */
+@keyframes confetti-burst {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-50px) scale(1) rotate(90deg); /* shoot upwards */
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px) scale(1) rotate(240deg); /* coming down */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(70px) scale(1) rotate(360deg); /* below the text */
+    opacity: 0;
+  }
 }
